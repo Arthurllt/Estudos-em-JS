@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            background: rgb(57, 57, 151);
+            color: white;
+            font: normal 18pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Iniciando com o Dom</h1>
+    <p>Aqui vai o resultado </p>
+    <p>Aprendendo a usar o <strong>Dom</strong> em JS</p>
+    <div id="msg">Clique aqui</div>
+
+    <script>
+
+        var p1 = window.document.getElementsByTagName("p")[0] // Uso do Selecionador por Marca - as [] remetem a qual paragrafo estamos selecionando. 
+
+        var corpo = window.document.body
+
+        corpo.style.background = "black"
+
+        // p1.style.color = "blue" - podemos também utilar CSS atravez do script
+        
+        window.document.write("Está escrito assim: " + p1.innerText) // podemos usar diversavas forma um ex é: window.document.URL - que mostra a Url que estamos utilizando. \\ o InnerText remete ao texto que está dentro da p1, mas não remete a formatação. Para remeter o texto junto a formatação utilizamos o innerHTML. 
+
+        /* 
+        var d = window.document.getElementById("msg")
+        d.style.background = "green"
+        d.innerText = "Estou aguardando..."
+        */
+
+        /* 
+        var d = window.document.querySelector("div#msg")
+        d.style.background = "blue"
+        */
+
+    </script>
+    
+</body>
+</html>
