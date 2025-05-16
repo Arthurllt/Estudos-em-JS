@@ -11,11 +11,18 @@ function verificar() {
     
     } else {
 
-        res.innerHTML = "Contando: "
+        res.innerHTML = "Contando: <br>"
 
         var i = Number(finic.value)
         var f = Number(ffnl.value)
         var c = Number(fcont.value)
+
+        if (c <= 0 ){
+
+             window.alert("[ERRO] Verifique o campo contagem! Considerando CONTAGEM 1")
+             c = 1
+
+        }
 
         
       
