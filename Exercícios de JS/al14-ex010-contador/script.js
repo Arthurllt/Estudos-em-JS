@@ -1,23 +1,51 @@
 function verificar() {
 
-    var finic = window.document.getElementById("txtinic")
-    var ffnl = window.document.getElementById("txtfnl")
-    var fcont = window.document.getElementById("txtcont")
+    var finic = document.getElementById("txtinic")
+    var ffnl = document.getElementById("txtfnl")
+    var fcont = document.getElementById("txtcont")
+    var res = document.getElementById("res")
 
-    if ( finic.value == null ) {
+    if ( finic.value.length == 0 || ffnl.value.length == 0 || fcont.value.length == 0 ) {
 
-        window.alert("[ERRO] Verifique o valor de início e tente novamente!")
+        window.alert("[ERRO] Verifique se tem campos nulo")
     
-    } else if ( ffnl.value <= finic.value){
-
-         window.alert("[ERRO] Você não pode contar numeros negativos")
-
     } else {
 
-        for (var finic = window.document.getElementById("txtinic"); finic.value <= ffnl.valeu; finic.value + fcont.valeu){
+        res.innerHTML = "Contando: "
 
-            res.innerHTML = "Contando:"
-             res.innerHTML = `${finic}`
+        var i = Number(finic.value)
+        var f = Number(ffnl.value)
+        var c = Number(fcont.value)
+
+        
+      
+        if ( i <=  f ) {
+
+            if ( c > (f - i)) {
+                window.alert("[ERRO] Verifique o campo contagem")
+            }else {
+        
+                for (var t = i ; t <= f ; t += c) {
+                res.innerHTML += ` ${t} \u{1F449}` 
+                }
+                res.innerHTML += ` \u{1F3C1}`
+            }
+        
+        } else if ( i > f) {
+
+             if ( c > (i - f)) {
+                window.alert("[ERRO] Verifique o campo contagem")
+            }else {
+
+                for (var t = i ; t >= f ; t -= c) {
+                res.innerHTML += ` ${t} \u{1F449}` 
+                }
+                res.innerHTML += ` \u{1F3C1}`
+        
+            }
         }
-    }
+
+    }   
+    
 }
+    
